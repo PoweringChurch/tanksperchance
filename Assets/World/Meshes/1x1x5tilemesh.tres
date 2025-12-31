@@ -1,0 +1,8 @@
+[gd_resource type="BoxMesh" load_steps=2 format=3 uid="uid://dnp7ow4up02p6"]
+
+[ext_resource type="Material" uid="uid://cc0ed7dmu3u2j" path="res://Assets/World/Materials/wallTileMaterial.tres" id="1_v123c"]
+
+[resource]
+lightmap_size_hint = Vector2i(34, 41)
+material = ExtResource("1_v123c")
+size = Vector3(1, 1, 5)

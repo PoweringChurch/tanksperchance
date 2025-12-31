@@ -1,0 +1,13 @@
+[gd_resource type="BoxMesh" load_steps=3 format=3 uid="uid://bcr07tbvmvch"]
+
+[ext_resource type="Texture2D" uid="uid://dfyvcemgbrhn1" path="res://Development/Assorted Dated-Looking Textures/stones_angular.png" id="1_ovmje"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84c5u"]
+albedo_color = Color(0.29219, 0.29219, 0.29219, 1)
+albedo_texture = ExtResource("1_ovmje")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+
+[resource]
+material = SubResource("StandardMaterial3D_84c5u")
+size = Vector3(26, 1, 26)

@@ -1,0 +1,590 @@
+[gd_scene load_steps=11 format=3 uid="uid://bedpp2p7rlsw2"]
+
+[ext_resource type="Script" path="res://Scripts/Components/Stage.cs" id="1_wxx0w"]
+[ext_resource type="Shape3D" uid="uid://b4wov4drax5ak" path="res://Assets/World/CollisionShapes/baseplateCollisionShape.tres" id="2_fkkso"]
+[ext_resource type="BoxMesh" uid="uid://bcr07tbvmvch" path="res://Assets/World/Meshes/baseplateMeshShape.tres" id="3_tuy1o"]
+[ext_resource type="Shape3D" uid="uid://4mwib3d6r0tv" path="res://Assets/World/CollisionShapes/1x1x5collisionShape.tres" id="4_iit4m"]
+[ext_resource type="BoxMesh" uid="uid://fmmhfyl43rqx" path="res://Assets/World/Meshes/1x1x5mesh.tres" id="5_1ttpu"]
+[ext_resource type="BoxMesh" uid="uid://buc3ke0qfwl7b" path="res://Assets/World/Meshes/tilemesh.tres" id="6_lq1au"]
+[ext_resource type="Shape3D" uid="uid://qhgafq7jky63" path="res://Assets/World/CollisionShapes/wallTileShape.tres" id="7_lyeoe"]
+[ext_resource type="BoxMesh" uid="uid://dnp7ow4up02p6" path="res://Assets/World/Meshes/1x1x5tilemesh.tres" id="8_f4ccp"]
+[ext_resource type="Script" path="res://Scripts/Components/EnemySpawnPoint.cs" id="9_5eyi2"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_l0n2d"]
+vertices = PackedVector3Array(-10.5, -0.5, -3, -10, -0.5, -2.25, -9.75, -0.5, -2.25, -9.75, -0.5, -5.25, -15, -0.5, 2, -12.75, -0.5, 1.5, -12.75, -0.5, -2.5, -12.25, -0.5, -5.25, -12.25, -0.5, -3, -12.75, -0.5, -5.75, -15, -0.5, -11, -12.75, -0.5, -11, -7, -0.5, -2.75, -6.75, -0.5, -2.75, -6.25, -0.5, -4, -6.75, -0.5, -6.75, -7, -0.5, -7.5, -1, -0.5, -4, -1, -0.5, -6, -1.75, -0.5, -6.5, -4, -0.5, -6.75, -4.5, -0.5, -6.25, -6.25, -0.5, -6.25, -10, -0.5, -11, -10, -0.5, -8, -7.5, -0.5, -8, -6.75, -0.5, -11, -1.75, -0.5, -11, -4, -0.5, -11, 1, -0.5, 2, 1.25, -0.5, 2, 1.75, -0.5, 1.25, 1.75, -0.5, -1, 1.25, -0.5, -1.5, 3.5, -0.5, 1.25, 4, -0.5, 2, 4.25, -0.5, 2, 4.25, -0.5, -1, 6.25, -0.5, -6, 1.75, -0.5, -3.75, 6.5, -0.5, -3.75, 7, -0.5, -3.25, 7, -0.5, -0.5, 7.25, -0.5, -0.5, 7.25, -0.5, -11, 7, -0.5, -6.75, 7, -0.5, -8.25, 1, -0.5, -3.25, 1.25, -0.5, -3.25, 1, -0.5, -11, 1, -0.5, -8.75, 6.5, -0.5, -8.75, -9.25, -0.5, -1.25, -10, -0.5, 1, -7.5, -0.5, -1.25, -7.5, -0.5, 1, -7, -0.5, 1.5, -6.75, -0.5, 3.25, -7, -0.5, 3.25, -7.5, -0.5, 3.75, -4.5, -0.5, 6, -6.25, -0.5, 3.75, -4.5, -0.5, 3.75, -12.25, -0.5, 3.75, -12.25, -0.5, 6, 0.25, -0.5, 3, 1, -0.5, 6.75, 1.25, -0.5, 7.5, -4, -0.5, 6.5, -4, -0.5, 3.25, -1.25, -0.5, 6.25, -1.25, -0.5, 3, 4.25, -0.5, 11.25, 4.25, -0.5, 8, 1.75, -0.5, 8, 1, -0.5, 11.25, 0.5, -0.5, 6.25, -1.75, -0.5, 2.5, -1.75, -0.5, -1.25, -4, -0.5, -1.25, -1.75, -0.5, 6.75, -4, -0.5, 11.25, -1.75, -0.5, 11.25, 4.75, -0.5, 3, 4, -0.5, 5.25, 6.25, -0.5, 3, 6.5, -0.5, 5.25, 7, -0.5, 5.75, 7, -0.5, 2.25, 7.25, -0.5, 11.25, -12.75, -0.5, 3.25, -12.75, -0.5, 6.5, -6.75, -0.5, 11.25, -6.75, -0.5, 8.75, -12.25, -0.5, 8.75, -15, -0.5, 11.25, -12.75, -0.5, 8.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(6, 5, 4), PackedInt32Array(8, 7, 0), PackedInt32Array(0, 7, 3), PackedInt32Array(6, 4, 9), PackedInt32Array(9, 4, 10), PackedInt32Array(8, 6, 7), PackedInt32Array(7, 6, 9), PackedInt32Array(10, 11, 9), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(20, 17, 21), PackedInt32Array(21, 17, 14), PackedInt32Array(14, 15, 22), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 26), PackedInt32Array(28, 27, 20), PackedInt32Array(20, 27, 19), PackedInt32Array(26, 16, 25), PackedInt32Array(16, 26, 15), PackedInt32Array(14, 22, 21), PackedInt32Array(30, 29, 31), PackedInt32Array(31, 29, 32), PackedInt32Array(32, 29, 33), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 37), PackedInt32Array(40, 39, 38), PackedInt32Array(38, 39, 18), PackedInt32Array(43, 42, 41), PackedInt32Array(31, 32, 34), PackedInt32Array(34, 32, 37), PackedInt32Array(41, 45, 43), PackedInt32Array(43, 45, 44), PackedInt32Array(45, 46, 44), PackedInt32Array(48, 47, 39), PackedInt32Array(39, 47, 17), PackedInt32Array(39, 17, 18), PackedInt32Array(50, 49, 51), PackedInt32Array(51, 49, 44), PackedInt32Array(48, 33, 47), PackedInt32Array(47, 33, 29), PackedInt32Array(40, 38, 41), PackedInt32Array(41, 38, 45), PackedInt32Array(44, 46, 51), PackedInt32Array(2, 52, 1), PackedInt32Array(1, 52, 53), PackedInt32Array(12, 13, 54), PackedInt32Array(54, 13, 55), PackedInt32Array(55, 13, 56), PackedInt32Array(57, 61, 58), PackedInt32Array(58, 61, 59), PackedInt32Array(59, 61, 60), PackedInt32Array(61, 62, 60), PackedInt32Array(54, 55, 52), PackedInt32Array(52, 55, 53), PackedInt32Array(63, 59, 64), PackedInt32Array(64, 59, 60), PackedInt32Array(58, 56, 57), PackedInt32Array(57, 56, 13), PackedInt32Array(29, 30, 65), PackedInt32Array(65, 30, 66), PackedInt32Array(66, 30, 67), PackedInt32Array(68, 60, 62), PackedInt32Array(62, 69, 68), PackedInt32Array(68, 69, 70), PackedInt32Array(70, 69, 71), PackedInt32Array(70, 71, 65), PackedInt32Array(73, 72, 74), PackedInt32Array(74, 72, 75), PackedInt32Array(65, 66, 76), PackedInt32Array(67, 74, 75), PackedInt32Array(67, 75, 66), PackedInt32Array(78, 77, 79), PackedInt32Array(79, 77, 69), PackedInt32Array(68, 70, 80), PackedInt32Array(69, 77, 71), PackedInt32Array(65, 76, 70), PackedInt32Array(82, 81, 80), PackedInt32Array(80, 81, 68), PackedInt32Array(36, 83, 35), PackedInt32Array(35, 83, 84), PackedInt32Array(86, 85, 87), PackedInt32Array(87, 85, 88), PackedInt32Array(88, 42, 43), PackedInt32Array(85, 86, 83), PackedInt32Array(83, 86, 84), PackedInt32Array(88, 43, 87), PackedInt32Array(87, 43, 89), PackedInt32Array(4, 5, 90), PackedInt32Array(64, 91, 63), PackedInt32Array(63, 91, 90), PackedInt32Array(90, 91, 4), PackedInt32Array(93, 92, 94), PackedInt32Array(94, 92, 95), PackedInt32Array(95, 96, 94), PackedInt32Array(96, 95, 91), PackedInt32Array(91, 95, 4)]
+agent_height = 1.0
+agent_radius = 0.75
+agent_max_climb = 0.0
+
+[node name="stage_testing" type="Node3D"]
+script = ExtResource("1_wxx0w")
+
+[node name="Navigation" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_l0n2d")
+
+[node name="Base" type="Node3D" parent="Navigation"]
+
+[node name="Baseplate" type="StaticBody3D" parent="Navigation/Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Baseplate"]
+shape = ExtResource("2_fkkso")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Baseplate"]
+mesh = ExtResource("3_tuy1o")
+
+[node name="Walls" type="Node3D" parent="Navigation/Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -1.5)
+
+[node name="Wall" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall2" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 7)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall2"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall2"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall3" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall3"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall3"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall4" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall4"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall4"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall5" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall5"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall5"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall6" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, -0.5, -11)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall6"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall6"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall7" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, -0.5, -11)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall7"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall7"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall8" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, -0.5, -11)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall8"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall8"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall9" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, -0.5, -11)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall9"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall9"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall10" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22, -0.5, -11)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall10"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall10"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall11" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25, -0.5, -9)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall11"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall11"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall12" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25, -0.5, -4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall12"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall12"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall13" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25, -0.5, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall13"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall13"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall14" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25, -0.5, 6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall14"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall14"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall15" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25, -0.5, 11)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall15"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall15"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall16" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -23, -0.5, 14)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall16"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall16"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall17" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -18, -0.5, 14)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall17"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall17"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall18" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -13, -0.5, 14)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall18"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall18"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall19" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8, -0.5, 14)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall19"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall19"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Wall20" type="StaticBody3D" parent="Navigation/Base/Walls"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3, -0.5, 14)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Base/Walls/Wall20"]
+shape = ExtResource("4_iit4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Base/Walls/Wall20"]
+mesh = ExtResource("5_1ttpu")
+
+[node name="Stage" type="Node3D" parent="Navigation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[node name="TileWall" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall2" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall2"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall2"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall3" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall3"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall3"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall4" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall4"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall4"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall5" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall5"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall5"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall6" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall6"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall6"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall7" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall7"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall7"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall8" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.5, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall8"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall8"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall9" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall9"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall9"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall10" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall10"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall10"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall11" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall11"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall11"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall12" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall12"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall12"]
+shape = ExtResource("7_lyeoe")
+
+[node name="5LengthTileWall" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall2" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall2"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall2"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall3" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall3"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall3"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall5" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall5"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall5"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall6" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall6"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall6"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall4" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall4"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall4"]
+shape = ExtResource("4_iit4m")
+
+[node name="TileWall13" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, -0.5, -7.02222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall13"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall13"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall14" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11, -0.5, -7.02222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall14"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall14"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall15" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, -0.5, -7.02222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall15"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall15"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall16" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11, -0.5, 1.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall16"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall16"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall17" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, -0.5, 1.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall17"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall17"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall18" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, -0.5, 1.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall18"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall18"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall19" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, -0.5, 6.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall19"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall19"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall20" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, -0.5, 6.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall20"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall20"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall21" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, -0.5, 6.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall21"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall21"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall22" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, -0.5, 6.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall22"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall22"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall23" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11, -0.5, 6.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall23"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall23"]
+shape = ExtResource("7_lyeoe")
+
+[node name="TileWall24" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, -0.5, 6.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/TileWall24"]
+mesh = ExtResource("6_lq1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/TileWall24"]
+shape = ExtResource("7_lyeoe")
+
+[node name="5LengthTileWall7" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, -0.5, -10.0222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall7"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall7"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall8" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, -0.5, 8.97778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall8"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall8"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall9" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, -0.5, -0.0222226)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall9"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall9"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall13" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4, -0.5, -3.02222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall13"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall13"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall10" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, -0.5, -0.0222221)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall10"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall10"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall11" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, -0.5, -10.0222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall11"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall11"]
+shape = ExtResource("4_iit4m")
+
+[node name="5LengthTileWall12" type="StaticBody3D" parent="Navigation/Stage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, -0.5, -5.02222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/Stage/5LengthTileWall12"]
+mesh = ExtResource("8_f4ccp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Navigation/Stage/5LengthTileWall12"]
+shape = ExtResource("4_iit4m")
+
+[node name="EnemySpawns" type="Node3D" parent="."]
+
+[node name="EnemySpawnPoint" type="Marker3D" parent="EnemySpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.5, 9)
+script = ExtResource("9_5eyi2")
+EnemyType = "Pink"
+
+[node name="EnemySpawnPoint2" type="Marker3D" parent="EnemySpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.5, 10)
+script = ExtResource("9_5eyi2")
+EnemyType = "Pink"
+
+[node name="EnemySpawnPoint3" type="Marker3D" parent="EnemySpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.5, 11)
+script = ExtResource("9_5eyi2")
+EnemyType = "Pink"
+
+[node name="EnemySpawnPoint4" type="Marker3D" parent="EnemySpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 9)
+script = ExtResource("9_5eyi2")
+EnemyType = "Pink"
+
+[node name="EnemySpawnPoint5" type="Marker3D" parent="EnemySpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 10)
+script = ExtResource("9_5eyi2")
+EnemyType = "Pink"
+
+[node name="EnemySpawnPoint6" type="Marker3D" parent="EnemySpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 11)
+script = ExtResource("9_5eyi2")
+EnemyType = "Pink"
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.5, -10)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2nk0sbcfm1ou"]
+
+[ext_resource type="BoxMesh" uid="uid://buc3ke0qfwl7b" path="res://Assets/World/Meshes/tilemesh.tres" id="1_1ajer"]
+[ext_resource type="Shape3D" uid="uid://qhgafq7jky63" path="res://Assets/World/CollisionShapes/wallTileShape.tres" id="2_537ut"]
+
+[node name="Wall" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_1ajer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = ExtResource("2_537ut")
