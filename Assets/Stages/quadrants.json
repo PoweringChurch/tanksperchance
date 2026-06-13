@@ -1,0 +1,155 @@
+{
+  "level_name": "Quadrants",
+  "grid_width": 13,
+  "grid_height": 13,
+  "objects": [
+	{
+	  "asset_id": "wall",
+	  "x": 0,
+	  "y": 6
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 1,
+	  "y": 6
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 2,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 4,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 5,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 7,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 8,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 6
+	},
+	{
+	  "asset_id": "green_enemy",
+	  "x": 2,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 5
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 7
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 6,
+	  "y": 11
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 6,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 12
+	},
+	{
+	  "asset_id": "grey_enemy",
+	  "x": 2,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 0
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 6,
+	  "y": 2
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 6,
+	  "y": 1
+	},
+	{
+	  "asset_id": "player_spawn",
+	  "x": 10,
+	  "y": 2
+	},
+	{
+	  "asset_id": "objective",
+	  "x": 10,
+	  "y": 10,
+	  "params": {
+		"data": 0
+	  }
+	}
+  ]
+}

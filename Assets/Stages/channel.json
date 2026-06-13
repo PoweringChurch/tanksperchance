@@ -1,0 +1,315 @@
+{
+  "level_name": "Channel",
+  "grid_width": 16,
+  "grid_height": 16,
+  "objects": [
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 7,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 8,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 8,
+	  "y": 1
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 8,
+	  "y": 0
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 0,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 1,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 2,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 9
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 3,
+	  "y": 10
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 3,
+	  "y": 11
+	},
+	{
+	  "asset_id": "pink_enemy",
+	  "x": 1,
+	  "y": 10
+	},
+	{
+	  "asset_id": "pink_enemy",
+	  "x": 10,
+	  "y": 10
+	},
+	{
+	  "asset_id": "player_spawn",
+	  "x": 1,
+	  "y": 1
+	},
+	{
+	  "asset_id": "objective",
+	  "x": 1,
+	  "y": 8,
+	  "params": {
+		"data": 0
+	  }
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 3,
+	  "y": 6
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 3,
+	  "y": 5
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 3,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 2,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 1,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 0,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 8,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 14
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 15
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 14,
+	  "y": 12
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 15,
+	  "y": 12
+	},
+	{
+	  "asset_id": "grey_enemy",
+	  "x": 13,
+	  "y": 14
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 5
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 7
+	},
+	{
+	  "asset_id": "grey_enemy",
+	  "x": 11,
+	  "y": 6
+	},
+	{
+	  "asset_id": "water",
+	  "x": 6,
+	  "y": 9
+	},
+	{
+	  "asset_id": "water",
+	  "x": 6,
+	  "y": 8
+	},
+	{
+	  "asset_id": "water",
+	  "x": 6,
+	  "y": 7
+	}
+  ]
+}

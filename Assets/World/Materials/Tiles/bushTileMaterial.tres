@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqt4gt6eg0cs2"]
+
+[ext_resource type="Texture2D" uid="uid://cpx3cpis3tny0" path="res://Development/textures/bushes.png" id="1_nkbbe"]
+
+[resource]
+transparency = 1
+albedo_color = Color(0.5, 0.5, 0.5, 0.5882353)
+albedo_texture = ExtResource("1_nkbbe")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true

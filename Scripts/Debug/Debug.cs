@@ -1,57 +1,42 @@
 using Godot;
-using System;
+using System.IO;
 
 public partial class Debug : Node
 {
-    private Node3D main3d;
-    private Stage currentStage;
-    private Node enemiesFolder;
-    private Node projectilesFolder;
-    private Node dynamiteFolder;
-    private Player plr;
+    private LevelLoader levelLoader;
+    private VBoxContainer levelButtonContainer;
     public override void _Ready()
     {
-        main3d = GetNode<Node3D>("/root/main3d");
-        enemiesFolder = GetNode<Node>("/root/main3d/Enemies");
-        projectilesFolder = GetNode<Node>("/root/main3d/Projectiles");
-        dynamiteFolder = GetNode<Node>("/root/main3d/Dynamite");
-        plr = GetNode<Player>("/root/main3d/Player");
+        levelButtonContainer = GetNode<VBoxContainer>("/root/main3d/UI/LevelSelect/VBoxContainer");
+        levelLoader = GetNode<LevelLoader>("/root/main3d/LevelLoader");
+        string stageDirectoryPath = "res://Assets/Stages/";
+        using var dir = DirAccess.Open(stageDirectoryPath);
+        dir.ListDirBegin();
+        string fileName = dir.GetNext();
+        while (fileName != "")
+        {
+            if (!dir.CurrentIsDir() && fileName.EndsWith(".json"))
+            {
+                string stageName = Path.GetFileNameWithoutExtension(fileName);
+                string fullPath = stageDirectoryPath + fileName;
+                Button levelButton = new Button();
+                levelButton.Text = stageName;
+                levelButton.Name = stageName;
+                levelButton.Pressed += () => levelLoader.LoadLevel(fullPath);
+                levelButtonContainer.AddChild(levelButton);
+            }
+            fileName = dir.GetNext();
+        }
     }
-
     public override void _Input(InputEvent @event)
-    {
-        base._Input(@event);
-        if (@event is InputEventKey keyEvent)
-        {
-            if (keyEvent.Keycode == Key.R && keyEvent.Pressed)
+	{
+		base._Input(@event);
+		if (@event is InputEventKey keyEvent)
+			if (keyEvent.Keycode == Key.K && keyEvent.Pressed)
             {
-                StartStage("stage_testing");
+                var navRegion = GetTree().Root.FindChild("NavRegion", true, false) as NavigationRegion3D;
+                GD.Print("rebaked?");
+                navRegion.BakeNavigationMesh();
             }
-        }
-
-    }
-    public void QueueFreeChildren(Node node)
-    {
-        foreach (Node child in node.GetChildren())
-        {
-            if (child is BaseProjectile proj)
-            {
-                proj.Destroy();
-                continue;
-            }
-            child.QueueFree();
-        }
-    }
-    public void StartStage(string stageName)
-    {
-        QueueFreeChildren(enemiesFolder);
-        QueueFreeChildren(projectilesFolder);
-        QueueFreeChildren(dynamiteFolder);
-        currentStage?.QueueFree();
-
-        var stageScene = GD.Load<PackedScene>($"res://Assets/Stages/{stageName}.tscn");
-        currentStage = (Stage)stageScene.Instantiate();
-        main3d.AddChild(currentStage);
-        currentStage.InitStage();
     }
 }

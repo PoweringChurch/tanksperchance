@@ -1,4 +1,4 @@
-[gd_resource type="BoxMesh" load_steps=3 format=3 uid="uid://bcr07tbvmvch"]
+[gd_resource type="BoxMesh" format=3 uid="uid://bcr07tbvmvch"]
 
 [ext_resource type="Texture2D" uid="uid://dfyvcemgbrhn1" path="res://Development/Assorted Dated-Looking Textures/stones_angular.png" id="1_ovmje"]
 

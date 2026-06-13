@@ -1,0 +1,395 @@
+{
+  "level_name": "Hostiles",
+  "grid_width": 20,
+  "grid_height": 16,
+  "objects": [
+	{
+	  "asset_id": "wall",
+	  "x": 2,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 4,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 5,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 7,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 8,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 5
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 13,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 14,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 4,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 5,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 7,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 8,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 2,
+	  "y": 12
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 5
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 2,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 4,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 5,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 5
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 3
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 2,
+	  "y": 8
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 2,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 5
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 6
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 7
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 16,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 17,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 16,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 17,
+	  "y": 13
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 18,
+	  "y": 10
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 19,
+	  "y": 10
+	},
+	{
+	  "asset_id": "water",
+	  "x": 10,
+	  "y": 13
+	},
+	{
+	  "asset_id": "water",
+	  "x": 11,
+	  "y": 13
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 6,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 12,
+	  "y": 2
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 7,
+	  "y": 2
+	},
+	{
+	  "asset_id": "bush",
+	  "x": 8,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 15,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 2,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 2,
+	  "y": 2
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 2
+	},
+	{
+	  "asset_id": "brown_enemy",
+	  "x": 6,
+	  "y": 14
+	},
+	{
+	  "asset_id": "water",
+	  "x": 1,
+	  "y": 12
+	},
+	{
+	  "asset_id": "water",
+	  "x": 0,
+	  "y": 12
+	},
+	{
+	  "asset_id": "player_spawn",
+	  "x": 18,
+	  "y": 2
+	},
+	{
+	  "asset_id": "objective",
+	  "x": 4,
+	  "y": 4,
+	  "params": {
+		"data": 0
+	  }
+	}
+  ]
+}

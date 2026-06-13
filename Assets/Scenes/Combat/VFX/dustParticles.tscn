@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bvg3rdrfskq6o"]
+
+[ext_resource type="Material" uid="uid://caahcost64lip" path="res://Assets/World/Materials/Particles/dust_process.tres" id="1_x2pcd"]
+[ext_resource type="QuadMesh" uid="uid://ctn80xx6dl8ub" path="res://Assets/World/Materials/Particles/dust_mesh.tres" id="2_6boi2"]
+
+[sub_resource type="Skin" id="Skin_pn1i8"]
+
+[node name="dust" type="GPUParticles3D" unique_id=192857195]
+amount = 16
+transform_align = 1
+process_material = ExtResource("1_x2pcd")
+draw_pass_1 = ExtResource("2_6boi2")
+draw_skin = SubResource("Skin_pn1i8")

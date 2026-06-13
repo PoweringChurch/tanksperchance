@@ -1,0 +1,315 @@
+{
+  "level_name": "Impenetrable Fortress",
+  "grid_width": 15,
+  "grid_height": 15,
+  "objects": [
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 5
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 4,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 5,
+	  "y": 3
+	},
+	{
+	  "asset_id": "water",
+	  "x": 6,
+	  "y": 3
+	},
+	{
+	  "asset_id": "water",
+	  "x": 7,
+	  "y": 3
+	},
+	{
+	  "asset_id": "water",
+	  "x": 8,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 3
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 4
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 5
+	},
+	{
+	  "asset_id": "water",
+	  "x": 11,
+	  "y": 6
+	},
+	{
+	  "asset_id": "water",
+	  "x": 11,
+	  "y": 7
+	},
+	{
+	  "asset_id": "water",
+	  "x": 11,
+	  "y": 8
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 9
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 11,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 10,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 9,
+	  "y": 11
+	},
+	{
+	  "asset_id": "water",
+	  "x": 8,
+	  "y": 11
+	},
+	{
+	  "asset_id": "water",
+	  "x": 7,
+	  "y": 11
+	},
+	{
+	  "asset_id": "water",
+	  "x": 6,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 5,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 4,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 11
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 10
+	},
+	{
+	  "asset_id": "wall",
+	  "x": 3,
+	  "y": 9
+	},
+	{
+	  "asset_id": "water",
+	  "x": 3,
+	  "y": 8
+	},
+	{
+	  "asset_id": "water",
+	  "x": 3,
+	  "y": 7
+	},
+	{
+	  "asset_id": "water",
+	  "x": 3,
+	  "y": 6
+	},
+	{
+	  "asset_id": "green_enemy",
+	  "x": 5,
+	  "y": 5
+	},
+	{
+	  "asset_id": "grey_enemy",
+	  "x": 9,
+	  "y": 9
+	},
+	{
+	  "asset_id": "grey_enemy",
+	  "x": 9,
+	  "y": 5
+	},
+	{
+	  "asset_id": "pink_enemy",
+	  "x": 5,
+	  "y": 9
+	},
+	{
+	  "asset_id": "objective",
+	  "x": 1,
+	  "y": 13,
+	  "params": {
+		"data": 0
+	  }
+	},
+	{
+	  "asset_id": "player_spawn",
+	  "x": 13,
+	  "y": 1
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 11,
+	  "y": 2
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 11,
+	  "y": 1
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 11,
+	  "y": 0
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 12,
+	  "y": 3
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 13,
+	  "y": 3
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 14,
+	  "y": 3
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 2,
+	  "y": 3
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 1,
+	  "y": 3
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 0,
+	  "y": 3
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 3,
+	  "y": 12
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 3,
+	  "y": 13
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 3,
+	  "y": 14
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 2,
+	  "y": 11
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 1,
+	  "y": 11
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 0,
+	  "y": 11
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 11,
+	  "y": 12
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 11,
+	  "y": 13
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 11,
+	  "y": 14
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 12,
+	  "y": 11
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 13,
+	  "y": 11
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 14,
+	  "y": 11
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 13,
+	  "y": 7
+	},
+	{
+	  "asset_id": "breakable_wall",
+	  "x": 1,
+	  "y": 7
+	}
+  ]
+}

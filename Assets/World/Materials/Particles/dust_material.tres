@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dd1quhnyauia8"]
+
+[ext_resource type="Texture2D" uid="uid://c8ojls7locrv7" path="res://Assets/World/Materials/Particles/dust_texture.tres" id="1_todxw"]
+
+[resource]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.66, 0.66, 0.66, 1)
+albedo_texture = ExtResource("1_todxw")

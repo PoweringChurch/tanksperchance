@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://h8sfx6sa38sl"]
+
+[ext_resource type="Script" uid="uid://dc2lyt3v1ljhv" path="res://Scripts/Tiles/WaterTile.cs" id="1_krges"]
+[ext_resource type="Material" uid="uid://cc0ed7dmu3u2j" path="res://Assets/World/Materials/Tiles/waterTileMaterial.tres" id="3_n2wdp"]
+[ext_resource type="Shape3D" uid="uid://qhgafq7jky63" path="res://Assets/World/CollisionShapes/wallTileShape.tres" id="3_s2pxd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6cye8"]
+material = ExtResource("3_n2wdp")
+
+[node name="Water" type="StaticBody3D" unique_id=741111311]
+script = ExtResource("1_krges")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1646885173]
+shape = ExtResource("3_s2pxd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1659404544]
+material_override = ExtResource("3_n2wdp")
+mesh = SubResource("BoxMesh_6cye8")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqce1skur83r5"]
+
+[ext_resource type="Script" uid="uid://dnsv0nhrgn6ul" path="res://Scripts/Tiles/BushTile.cs" id="1_duxkw"]
+[ext_resource type="Shape3D" uid="uid://qhgafq7jky63" path="res://Assets/World/CollisionShapes/wallTileShape.tres" id="2_hm7lu"]
+[ext_resource type="Material" uid="uid://cc0ed7dmu3u2j" path="res://Assets/World/Materials/Tiles/waterTileMaterial.tres" id="3_1eckn"]
+[ext_resource type="Material" uid="uid://bqt4gt6eg0cs2" path="res://Assets/World/Materials/Tiles/bushTileMaterial.tres" id="3_hm7lu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6cye8"]
+material = ExtResource("3_1eckn")
+
+[node name="Bush" type="StaticBody3D" unique_id=741111311]
+script = ExtResource("1_duxkw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1646885173]
+shape = ExtResource("2_hm7lu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1659404544]
+material_override = ExtResource("3_hm7lu")
+mesh = SubResource("BoxMesh_6cye8")

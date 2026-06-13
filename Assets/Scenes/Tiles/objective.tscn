@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b5j3kyq5qaoat"]
+
+[ext_resource type="Script" uid="uid://ckc4t7i3hcll5" path="res://Scripts/Tiles/Objective.cs" id="1_mxwlb"]
+[ext_resource type="Material" uid="uid://jtmqn7a3sfxp" path="res://Assets/World/Materials/Tiles/objectiveMaterial.tres" id="2_mxwlb"]
+[ext_resource type="BoxMesh" uid="uid://buc3ke0qfwl7b" path="res://Assets/World/Meshes/tilemesh.tres" id="3_5o22q"]
+[ext_resource type="Shape3D" uid="uid://qhgafq7jky63" path="res://Assets/World/CollisionShapes/wallTileShape.tres" id="4_bmw3o"]
+
+[node name="Wall" type="StaticBody3D" unique_id=202109425]
+script = ExtResource("1_mxwlb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1703175724]
+material_override = ExtResource("2_mxwlb")
+mesh = ExtResource("3_5o22q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1343229348]
+shape = ExtResource("4_bmw3o")

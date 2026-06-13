@@ -1,0 +1,25 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://caahcost64lip"]
+
+[sub_resource type="Curve" id="Curve_dsuah"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.022556387, 1), 0.0, 0.0, 0, 0, Vector2(0.7969925, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_pq7yf"]
+curve = SubResource("Curve_dsuah")
+
+[sub_resource type="Curve" id="Curve_mm3is"]
+_data = [Vector2(0, 0.39690715), 0.0, 0.0, 0, 0, Vector2(0.6503759, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_a6qts"]
+curve = SubResource("Curve_mm3is")
+
+[resource]
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -0.10000224
+linear_accel_max = 0.09999776
+radial_accel_min = -2.2351742e-06
+radial_accel_max = -2.2351742e-06
+scale_max = 1.1
+scale_curve = SubResource("CurveTexture_a6qts")
+alpha_curve = SubResource("CurveTexture_pq7yf")
