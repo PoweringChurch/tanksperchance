@@ -19,7 +19,7 @@ public partial class BaseTile : StaticBody3D
     {
         CollisionLayer = 0;
         CollisionMask  = 0;
-        AddToGroup("toBake");
+        AddToGroup("navigation");
         if (characterCollide)
         {
             CollisionLayer |= CollisionLayers.HurtboxColliders;
@@ -45,4 +45,11 @@ public partial class BaseTile : StaticBody3D
         if (damage >= destroyThreshold)
             QueueFree(); // destroy
     }
+    public override void _ExitTree()
+    {
+        base._ExitTree();
+        var levelLoader = GetNode<LevelLoader>("/root/main3d/LevelLoader");
+        levelLoader._currentNavRegion.BakeNavigationMesh();
+    }
+
 }

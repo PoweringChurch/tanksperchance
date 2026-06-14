@@ -39,6 +39,7 @@ public partial class BaseProjectile : Hitbox
     }
     public void Destroy()
     {
+        ProjectileManager.RemoveProjectile(this);
         QueueFree();
     }
     public Vector3 PredictPosition(float foresight)

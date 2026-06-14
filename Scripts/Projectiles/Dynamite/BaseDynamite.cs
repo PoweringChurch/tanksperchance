@@ -19,5 +19,4 @@ public partial class BaseDynamite : Hurtbox
         newExplosion.Position = Position;
         GetTree().CreateTimer(0.1).Timeout += newExplosion.QueueFree;
     }
-
 }

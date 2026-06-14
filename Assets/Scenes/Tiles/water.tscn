@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://dc2lyt3v1ljhv" path="res://Scripts/Tiles/WaterTile.cs" id="1_krges"]
 [ext_resource type="Material" uid="uid://cc0ed7dmu3u2j" path="res://Assets/World/Materials/Tiles/waterTileMaterial.tres" id="3_n2wdp"]
 [ext_resource type="Shape3D" uid="uid://qhgafq7jky63" path="res://Assets/World/CollisionShapes/wallTileShape.tres" id="3_s2pxd"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_6cye8"]
-material = ExtResource("3_n2wdp")
+[ext_resource type="CylinderMesh" uid="uid://dsjl7n1kq4ibe" path="res://Assets/World/Meshes/hole_mesh.tres" id="4_6cye8"]
 
 [node name="Water" type="StaticBody3D" unique_id=741111311]
 script = ExtResource("1_krges")
@@ -14,5 +12,6 @@ script = ExtResource("1_krges")
 shape = ExtResource("3_s2pxd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1659404544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49, 0)
 material_override = ExtResource("3_n2wdp")
-mesh = SubResource("BoxMesh_6cye8")
+mesh = ExtResource("4_6cye8")

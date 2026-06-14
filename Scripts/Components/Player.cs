@@ -11,6 +11,12 @@ public partial class Player : Node
 	public int maxdynamite = 2;
 	public Character character;
 	public bool playerAlive = false;
+
+	public float camMinX = 0;
+	public float camMaxX = 0;
+	public float camMinZ = 0;
+	public float camMaxZ = 0;
+
 	// private
 	private Camera3D gamecam;
 	private Node3D barrelEnd;
@@ -37,12 +43,12 @@ public partial class Player : Node
 	{
 		playerAlive = true;
 		character = objectRoot.GetNode<Character>("Character");
-		if (debugMode)
-		{
-			character.DebugMode();
-			dynamiteReloadInterval = 0.01f;
-			reloadInterval = 0.01f;
-		}
+
+		character.charHurtbox.HurtType = debugMode ? HurtType.None : HurtType.Friendly;
+		character.movespeed = debugMode ? 8 : 3;
+		dynamiteReloadInterval = debugMode ? 0.01f : 5;
+		reloadInterval = debugMode ? 0.01f : 1;
+
 		barrelEnd = objectRoot.GetNode<Node3D>("Character/Turret/BarrelEnd");
 		gamecam = GetNode<Camera3D>("/root/main3d/Player/GameCamera");
 		var offset = new Vector3(10f, 10f, 0); //because of orthogonal cameras just being better if you just set x and y to be the same the tank is always centered
@@ -88,8 +94,11 @@ public partial class Player : Node
 		if (!playerAlive) return;
 		if (gamecam == null)
 			return;
-		var offset = new Vector3(0, 10f, 8f); //because of orthogonal cameras just being better if you just set x and y to be the same the tank is always centered
-		gamecam.Position = gamecam.Position.Lerp(character.Position + offset, 0.1f);
+		var offset = new Vector3(0, 10f, 10f);
+    	Vector3 targetCamPos = character.Position + offset;
+		float clampedX = Math.Clamp(targetCamPos.X, camMinX, camMaxX);
+		float clampedZ = Math.Clamp(targetCamPos.Z, camMinZ, camMaxZ);
+		gamecam.Position = new Vector3(clampedX, offset.Y, clampedZ);
 	}
 
 	public override void _Input(InputEvent @event)

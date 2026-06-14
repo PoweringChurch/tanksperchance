@@ -144,9 +144,9 @@ public partial class PinkEnemy : BaseEnemy
     {
         BaseProjectile priorityProjectile = null;
         float shortestDistance = 100f;
-        foreach (var projectile in ProjectileManager.ActiveProjectiles)
+        foreach (var projectile in ProjectileManager.GetProjectilesNear(Position,3))
         {
-            if (projectile.HurtType != HurtType.Enemy) 
+            if (projectile.HurtType != HurtType.Enemy || projectile.IsInsideTree()) 
                 return;
             var projectileDistance = (projectile.GlobalPosition - GlobalPosition).Length();
             if (projectileDistance < shortestDistance)

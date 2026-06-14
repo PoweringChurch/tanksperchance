@@ -5,9 +5,24 @@ public partial class Debug : Node
 {
     private LevelLoader levelLoader;
     private VBoxContainer levelButtonContainer;
+    private Button enableDebugMode;
+    private Button disableDebugMode;
     public override void _Ready()
     {
-        levelButtonContainer = GetNode<VBoxContainer>("/root/main3d/UI/LevelSelect/VBoxContainer");
+        var ui = GetNode<Control>("/root/main3d/UI");
+
+        var debugList = ui.GetNode<VBoxContainer>("DebugPanel/VBoxContainer");
+        
+        // debug mode
+        enableDebugMode = debugList.GetNode<Button>("DebugMode/Enable");
+        disableDebugMode = debugList.GetNode<Button>("DebugMode/Disable");
+        var playerNode = GetNode<Player>("/root/main3d/Player");
+
+        enableDebugMode.Pressed += () => playerNode.debugMode = true;
+        disableDebugMode.Pressed += () => playerNode.debugMode = false;
+
+        // level select list
+        levelButtonContainer = debugList.GetNode<VBoxContainer>("LevelSelect/VBoxContainer");
         levelLoader = GetNode<LevelLoader>("/root/main3d/LevelLoader");
         string stageDirectoryPath = "res://Assets/Stages/";
         using var dir = DirAccess.Open(stageDirectoryPath);
@@ -27,16 +42,5 @@ public partial class Debug : Node
             }
             fileName = dir.GetNext();
         }
-    }
-    public override void _Input(InputEvent @event)
-	{
-		base._Input(@event);
-		if (@event is InputEventKey keyEvent)
-			if (keyEvent.Keycode == Key.K && keyEvent.Pressed)
-            {
-                var navRegion = GetTree().Root.FindChild("NavRegion", true, false) as NavigationRegion3D;
-                GD.Print("rebaked?");
-                navRegion.BakeNavigationMesh();
-            }
     }
 }

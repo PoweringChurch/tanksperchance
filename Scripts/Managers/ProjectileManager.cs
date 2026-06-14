@@ -17,8 +17,13 @@ public partial class ProjectileManager : Node
     {
         var nearby = new List<BaseProjectile>();
         foreach (var projectile in ActiveProjectiles)
-            if (projectile.GlobalPosition.DistanceTo(position) <= radius)
+            if (!IsInstanceValid(projectile)) {
+                RemoveProjectile(projectile);
+                continue;
+            }
+            else if (projectile.GlobalPosition.DistanceTo(position) <= radius)
                 nearby.Add(projectile);
+            
         return nearby;
     }
 }

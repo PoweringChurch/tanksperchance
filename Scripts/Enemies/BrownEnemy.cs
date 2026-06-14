@@ -25,9 +25,9 @@ public partial class BrownEnemy : BaseEnemy
     public override void _PhysicsProcess(double dt)
     {
         base._PhysicsProcess(dt);
-        LookAtPosition(plrchar.Position, dt);
         if (!player.playerAlive)
             return;
+        LookAtPosition(plrchar.Position, dt);
         shootTimer -= (float)dt;
         thinkTimer -= (float)dt;
         if (HasLos)

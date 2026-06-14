@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://jyn2a05ybcp4" path="res://Development/Assorted Dated-Looking Textures/misc_gradient.png" id="1_yk1ue"]
 
 [resource]
-transparency = 1
 albedo_color = Color(1, 1, 1, 0.19607843)
 albedo_texture = ExtResource("1_yk1ue")
 uv1_scale = Vector3(0.5, 0.5, 0.5)

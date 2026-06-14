@@ -5,7 +5,7 @@ using Godot;
 public partial class Character : CharacterBody3D
 {
 	public int health = 1;
-	public int movespeed = 4;
+	public int movespeed = 3;
 
 	public Camera3D gameCamera;
 	public CharacterBody3D character;
@@ -17,15 +17,12 @@ public partial class Character : CharacterBody3D
 	public override void _Ready()
 	{
 		gameCamera = GetNode<Camera3D>("/root/main3d/Player/GameCamera");
-
 		character = this; //ik that this isnt necessary but i like it for readability
 		turret = GetNode<Node3D>("Turret");
 		charCollision = GetNode<CollisionShape3D>("Collision");
 		bodyMesh = GetNode<MeshInstance3D>("Body");
 		charHurtbox = GetNode<Hurtbox>("Hurtbox");
 		charHurtbox.OnHurt += Hurt;
-
-		debugSphere = GetNode<MeshInstance3D>("/root/main3d/DebugSphere");
 	}
 	public override void _Process(double delta)
 	{
@@ -34,8 +31,8 @@ public partial class Character : CharacterBody3D
 	}
 	public void Hurt(Hitbox hitbox)
 	{
-		GD.Print(hitbox.Name);
-		health -= hitbox.Damage;
+		if (hitbox.HurtType == charHurtbox.HurtType)
+			health -= hitbox.Damage;
 		if (hitbox is BaseProjectile proj && proj.DestroyOnHit == true)
 			hitbox.QueueFree();
 	}
@@ -100,11 +97,5 @@ public partial class Character : CharacterBody3D
 			return (Vector3)rayArray["position"];
 		}
 		return Vector3.Zero;
-	}
-	public void DebugMode()
-	{
-		charHurtbox.HurtType = HurtType.None;
-		movespeed = 8;
-		charCollision.QueueFree();
 	}
 }

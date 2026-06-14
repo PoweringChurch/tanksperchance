@@ -128,7 +128,6 @@ public partial class BaseEnemy : CharacterBody3D
     public void Hurt(Hitbox hitbox)
     {
         health -= hitbox.Damage;
-        GD.Print(Name + " health is " + health);
         if (hitbox is BaseProjectile proj && proj.DestroyOnHit == true)
             proj.Destroy();
         if (health <= 0)
